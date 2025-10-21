@@ -8,5 +8,11 @@ def character_amount(text):
     lowercase = text.lower()
     counts = {}
     for character in lowercase:
-        counts[character] = counts.get(character, 0) + 1
+        if character.isalpha():
+            counts[character] = counts.get(character, 0) + 1
     return counts
+
+def report(counts):
+    return counts[1]
+
+
